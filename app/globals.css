@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-dm-sans: 'DM Sans', sans-serif;
+  --font-dm-mono: 'DM Mono', monospace;
+  --violet: #7D39EB;
+  --lime: #C6FF33;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection { background: #C6FF33; color: #000; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: #333; border-radius: 2px; }
+
+@layer utilities {
+  .text-gradient-violet {
+    background: linear-gradient(135deg, #7D39EB, #C6FF33);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .glow-violet { box-shadow: 0 0 40px rgba(125, 57, 235, 0.3); }
+  .glow-lime { box-shadow: 0 0 40px rgba(198, 255, 51, 0.25); }
+}
